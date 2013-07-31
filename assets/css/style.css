@@ -77,3 +77,34 @@ body {
     padding: 4px 10px;
 }
 /* navbar */
+
+
+
+/* Carousel */
+.carousel-indicators {
+    bottom: 0px;
+}
+.carousel-control { width: 8% }
+.carousel-control > span.icon-prev,
+.carousel-control > span.icon-next {
+    font-size: 48px;
+    font-size: 4.8em;
+}
+.carousel-control .glyphicon, .carousel-control .icon-prev, .carousel-control .icon-next {
+    top: 40%;
+}
+.carousel-caption {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-shadow: 0;
+    background: rgba(0, 0, 0, 0.9);
+    font-size: 22px;
+    font-size: 2.2em;
+}
+/* Carousel */
