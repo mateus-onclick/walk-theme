@@ -8,6 +8,9 @@
 
     <title>Walk - A Example Bootstrap theme</title>
 
+    <!-- Open Sans google webfonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
     <!-- Bootstrap core CSS -->
     <link href="./assets/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="./assets/css/glyphicons.css" rel="stylesheet">
@@ -18,19 +21,36 @@
     <div class="navbartop navbar">
         <div class="container">
 
-            <span class="pull-left">Call us: (123) 456-7890 - Email: contact@walk.com</span>
-            
-            <ul class="nav nav-pills pull-right">
-                <li><a href="#">Follow us</a></li>
-                <li><a href="#">Sign In</a></li>
-            </ul>
+            <div class="row">
 
+                <div class="col-lg-6 hidden-sm">
+                    <span class="pull-left">Call us: (123) 456-7890 - Email: contact@walk.com</span>
+                </div>
+                
+                <div class="col-lg-6">
+                    <ul class="nav nav-pills pull-right">
+                        <li><a href="#">Follow us</a></li>
+                        <li><a href="#">Sign In</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </div>
 
     <header id="header">
         
-        <div class="container"></div>
+        <div class="container">
+
+            <div class="logo pull-left">
+                <h1><a href="#"><img src="assets/images/walk-logo.png" class="img-responsive" alt=""></a></h1>
+            </div>
+
+            <div class="pull-right hidden-sm">
+                <a href="#"><img src="assets/images/ads-728x90.png"  class="img-responsive" alt=""></a>
+            </div>
+
+        </div>
 
     </header>
 
@@ -49,9 +69,23 @@
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Blog <span class="caret"></span> </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="#">Category 1</a></li>
+                            <li><a href="#">Category 2</a></li>
+                            <li><a href="#">Category 3</a></li>
+                            <li><a href="#">Category 4</a></li>
+                            <li><a href="#">Category 5</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">Contact</a></li>
                 </ul>
+
+                <div class="row">
+                    <form class="navbar-form pull-right col-lg-3">
+                        <input type="text" class="form-control input-small" placeholder="Search...">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
