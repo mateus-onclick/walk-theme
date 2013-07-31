@@ -272,6 +272,40 @@ a {
 
 
 
+
+/* modal sign in */
+.form-signin .form-signin-heading {
+    padding: 5px 20px;
+    text-align: center;
+    background-color: #428bca;
+}
+.form-signin .form-signin-heading h2 {
+    text-transform: uppercase;
+    font-size: 26px;
+    color: #fff;
+}
+.form-signin form {
+    padding: 20px;
+}
+.form-signin .checkbox {
+    margin-bottom: 10px;
+    font-weight: normal;
+    cursor: pointer;
+    color: #7c7c7c;
+    font-size: 14px;
+}
+.form-signin .input-group-addon .glyphicon {
+    color: #7c7c7c;
+}
+.form-signin .input-group {
+    margin-bottom: 5px;
+}
+/* modal sign in */
+
+
+
+
+
 /* Footer */
 #footer {
     margin-top: 20px;
