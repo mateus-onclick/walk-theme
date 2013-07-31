@@ -18,6 +18,7 @@
     <!-- Custom style -->
     <link href="./assets/css/style.css" rel="stylesheet"></head>
 <body>
+    <!-- Le navbar top -->
     <div class="navbartop navbar">
         <div class="container">
 
@@ -37,7 +38,9 @@
             </div>
         </div>
     </div>
+    <!-- End Le navbar top -->
 
+    <!-- Le header -->
     <header id="header">
         
         <div class="container">
@@ -53,7 +56,9 @@
         </div>
 
     </header>
+    <!-- End Le header -->
 
+    <!-- Le primary navgation -->
     <nav id="primary-nav" class="navbar">
         <div class="container">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
@@ -92,14 +97,18 @@
             </div>
         </div>
     </nav>
+    <!-- End Le primary navgation -->
 
+    <!-- Le container -->
     <div class="container">
-        <div id="carousel-example-generic" class="carousel slide">
+
+        <!-- Le Carousel -->
+        <div id="slider" class="carousel slide">
             <!-- Indicators -->
             <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#slider" data-slide-to="0" class="active"></li>
+                <li data-target="#slider" data-slide-to="1"></li>
+                <li data-target="#slider" data-slide-to="2"></li>
             </ol>
 
             <!-- Wrapper for slides -->
@@ -128,22 +137,52 @@
             </div>
 
             <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <a class="left carousel-control" href="#slider" data-slide="prev">
                 <span class="icon-prev"></span>
             </a>
-            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <a class="right carousel-control" href="#slider" data-slide="next">
                 <span class="icon-next"></span>
             </a>
         </div>
+        <!-- End Le Carousel -->
+
+        <div class="clearfix"></div><!-- Le clearfix -->
+
+        <section class="teaser row">
+            <article class="col-lg-4">
+                <div class="teaser-icon pull-left"><span class="glyphicon glyphicon-phone"></span></div>
+                <header class="teaser-header"><h3>Responsive Design <small>Bootstrap 3</small></h3></header>
+                <div class="clearfix"></div><!-- Le clearfix -->
+                <div class="teaser-content">
+                    <p>Nullam sit amet nisi nisi, sit amet faucibus tellus. In ut leo a mauris feugiat faucibus non sed lacus. Cras elit velit, porta blandit tempor in, commodo. <a href="#">Read more &raquo;</a></p>
+                </div>
+            </article>
+
+            <article class="col-lg-4">
+                <div class="teaser-icon pull-left"><span class="glyphicon glyphicon-leaf"></span></div>
+                <header class="teaser-header"><h3>Lorem ipsum dolor</h3></header>
+                <div class="clearfix"></div><!-- Le clearfix -->
+                <div class="teaser-content">
+                    <p>Nullam sit amet nisi nisi, sit amet faucibus tellus. In ut leo a mauris feugiat faucibus non sed lacus. Cras elit velit, porta blandit tempor in, commodo. <a href="#">Read more &raquo;</a></p>
+                </div>
+            </article>
+
+            <article class="col-lg-4">
+                <div class="teaser-icon pull-left"><span class="glyphicon glyphicon-briefcase"></span></div>
+                <header class="teaser-header"><h3>Lorem ipsum dolor</h3></header>
+                <div class="clearfix"></div><!-- Le clearfix -->
+                <div class="teaser-content">
+                    <p>Nullam sit amet nisi nisi, sit amet faucibus tellus. In ut leo a mauris feugiat faucibus non sed lacus. Cras elit velit, porta blandit tempor in, commodo. <a href="#">Read more &raquo;</a></p>
+                </div>
+            </article>
+        </section>
+
     </div>
+    <!-- End Le container -->
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
+    
+    <!-- Le scripts -->
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="./assets/js/main.js"></script>
