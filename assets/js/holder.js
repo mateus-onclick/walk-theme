@@ -79,7 +79,7 @@ function render(mode, el, holder, src) {
 		theme = holder.theme,
 		text = holder.text ? decodeURIComponent(holder.text) : holder.text;
 	var dimensions_caption = dimensions.width + "x" + dimensions.height;
-		
+
 	theme = (text ? extend(theme, {
 		text: text
 	}) : theme);
@@ -221,7 +221,7 @@ if (!canvas.getContext) {
 }
 
 var dpr = 1, bsr = 1;
-	
+
 if(!fallback){
     dpr = window.devicePixelRatio || 1,
     bsr = ctx.webkitBackingStorePixelRatio || ctx.mozBackingStorePixelRatio || ctx.msBackingStorePixelRatio || ctx.oBackingStorePixelRatio || ctx.backingStorePixelRatio || 1;
@@ -332,7 +332,7 @@ app.add_image = function (src, el) {
 app.run = function (o) {
 	var options = extend(settings, o),
 	    images = [], imageNodes = [], bgnodes = [];
-	    
+
 	if(typeof(options.images) == "string"){
 	    imageNodes = selector(options.images);
 	}
@@ -361,7 +361,7 @@ app.run = function (o) {
 		holdercss.type = "text/css";
 		document.getElementsByTagName("head")[0].appendChild(holdercss);
 	}
-	
+
 	if (!options.nocss) {
 	    if (holdercss.styleSheet) {
 		    holdercss.styleSheet.cssText += options.stylesheet;
@@ -370,7 +370,7 @@ app.run = function (o) {
 	    }
 	}
 
-	
+
 
 	var cssregex = new RegExp(options.domain + "\/(.*?)\"?\\)");
 
@@ -396,20 +396,20 @@ app.run = function (o) {
 	}
 
 	for (l = images.length, i = 0; i < l; i++) {
-	    
+
 		var attr_src = attr_data_src = src = null;
-		
+
 		try{
 		    attr_src = images[i].getAttribute("src");
 		    attr_datasrc = images[i].getAttribute("data-src");
 		}catch(e){}
-				
+
 		if (attr_datasrc == null && !! attr_src && attr_src.indexOf(options.domain) >= 0) {
 			src = attr_src;
 		} else if ( !! attr_datasrc && attr_datasrc.indexOf(options.domain) >= 0) {
 			src = attr_datasrc;
 		}
-		
+
 		if (src) {
 			var holder = parse_flags(src.substr(src.lastIndexOf(options.domain) + options.domain.length + 1)
 				.split("/"), options);
