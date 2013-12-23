@@ -1,53 +1,218 @@
-//
-// Mixins
+// ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
+// Less Functions
+// ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
+
+// clear - reset floats
 // --------------------------------------------------
-
-
-// Utilities
-// -------------------------
-
-// Clearfix
-// Source: http://nicolasgallagher.com/micro-clearfix-hack/
-//
-// For modern browsers
-// 1. The space content is one way to avoid an Opera bug when the
-//    contenteditable attribute is included anywhere else in the document.
-//    Otherwise it causes space to appear at the top and bottom of elements
-//    that are clearfixed.
-// 2. The use of `table` rather than `block` is only necessary if using
-//    `:before` to contain the top-margins of child elements.
 .clearfix() {
-  &:before,
-  &:after {
-    content: " "; // 1
-    display: table; // 2
-  }
-  &:after {
-    clear: both;
-  }
+    *zoom:1;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+
+// center blocks
+// --------------------------------------------------
+.center-block() {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// reset margins
+// --------------------------------------------------
+.reset() {
+    margin: 0;
+    padding: 0;
 }
 
 // WebKit-style focus
 .tab-focus() {
-  // Default
-  outline: thin dotted;
-  // WebKit
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+    // Default
+    outline: thin dotted;
+    // WebKit
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
 }
 
-// Center-align a block level element
-.center-block() {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+// Gradient
+// --------------------------------------------------
+.gradient(@startColor: #555, @endColor: #333) {
+    background-color: @endColor;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(@startColor), to(@endColor)); // Konqueror
+    background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+    background-image: -ms-linear-gradient(top, @startColor, @endColor); // IE10
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @startColor), color-stop(100%, @endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(top, @startColor, @endColor); // The standard
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down
 }
+
+// Border
+// --------------------------------------------------
+.bordered(@top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE) {
+    border-top: solid 1px @top-color;
+    border-left: solid 1px @left-color;
+    border-right: solid 1px @right-color;
+    border-bottom: solid 1px @bottom-color;
+}
+
+// Border Rounded
+// --------------------------------------------------
+.rounded(@radius: 5px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+}
+
+
+// Border Radius
+// --------------------------------------------------
+.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+    -webkit-border-top-right-radius: @topright;
+    -webkit-border-bottom-right-radius: @bottomright;
+    -webkit-border-bottom-left-radius: @bottomleft;
+    -webkit-border-top-left-radius: @topleft;
+       -moz-border-radius-topright: @topright;
+       -moz-border-radius-bottomright: @bottomright;
+       -moz-border-radius-bottomleft: @bottomleft;
+       -moz-border-radius-topleft: @topleft;
+            border-top-right-radius: @topright;
+            border-bottom-right-radius: @bottomright;
+            border-bottom-left-radius: @bottomleft;
+            border-top-left-radius: @topleft;
+}
+
+// opacity
+// --------------------------------------------------
+.opacity(@opacity: 0.5) {
+    -webkit-opacity: @opacity;
+     -khtml-opacity: @opacity;
+       -moz-opacity: @opacity;
+            opacity: @opacity;
+
+    @alpha: (@opacity * 100);
+    filter: alpha(opacity=@alpha);
+}
+
+// rotation
+// --------------------------------------------------
+.rotation(@deg:5deg){
+  -webkit-transform: rotate(@deg);
+     -moz-transform: rotate(@deg);
+          transform: rotate(@deg);
+}
+
+// scale
+// --------------------------------------------------
+.scale(@ratio:1.5){
+    -webkit-transform: scale(@ratio);
+       -moz-transform: scale(@ratio);
+            transform: scale(@ratio);
+}
+
+// Transition
+// --------------------------------------------------
+.transition(@duration:0.2s, @ease:ease-out, @delay:0s) {
+    -webkit-transition: all @duration @ease @delay;
+       -moz-transition: all @duration @ease @delay;
+            transition: all @duration @ease @delay;
+}
+// transition duration
+// --------------------------------------------------
+.transition-duration(@duration:0.2s) {
+    -webkit-transition-duration: @duration;
+       -moz-transition-duration: @duration;
+            transition-duration: @duration;
+}
+
+// drop Shadows
+// --------------------------------------------------
+.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
+    -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+       -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+            box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+
+// inner Shadows
+// --------------------------------------------------
+.inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
+    -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+       -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+            box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+// box Shadows
+// --------------------------------------------------
+.box-shadow(@shadow) {
+    -webkit-box-shadow: @shadow;
+       -moz-box-shadow: @shadow;
+            box-shadow: @shadow;
+}
+
+// text Shadows
+// --------------------------------------------------
+.text-shadow(@horizontal: 1px, @vertical: 1px, @blur: 2px, @color: #000) {
+    text-shadow: @horizontal @vertical @blur @color;
+    filter: e(%("dropshadow(color=%d, offx=%d, offy=%d)", @color, @horizontal, @vertical)); // IE9 and down
+}
+
+
+// background-size
+// --------------------------------------------------
+.background-size(@size: auto) {
+  -webkit-background-size: @size;
+     -moz-background-size: @size;
+       -o-background-size: @size;
+          background-size: @size;
+}
+
+
+
+// box-sizing
+// --------------------------------------------------
+.box-sizing(@box-sizing: border-box) {
+    -webkit-box-sizing: @box-sizing;
+       -moz-box-sizing: @box-sizing;
+            box-sizing: @box-sizing;
+}
+
+// User select
+// For selecting text on the page
+.user-select(@select) {
+  -webkit-user-select: @select;
+     -moz-user-select: @select;
+      -ms-user-select: @select; // IE10+
+       -o-user-select: @select;
+          user-select: @select;
+}
+
+// selection
+// --------------------------------------------------
+.selection(@background: #0B4F95, @color: #ffffff) {
+    ::-moz-selection { background: @background; color: @color; text-shadow: none; }
+    ::selection { background: @background; color: @color; text-shadow: none; }
+}
+
 
 // Sizing shortcuts
 .size(@width; @height) {
   width: @width;
   height: @height;
 }
+
 .square(@size) {
   .size(@size; @size);
 }
