@@ -1,5 +1,4 @@
 # Walk #
-========
 
 Walk - Bootstrap template bootstrap 3
 
@@ -11,7 +10,7 @@ Walk - Bootstrap template bootstrap 3
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## History ##
+## Changelog ##
 
 * v1.0.0 Jul 30, 2013
     * Start project
@@ -21,4 +20,4 @@ Walk - Bootstrap template bootstrap 3
 
 ## License ##
 
-[MIT License](http://mit.fernandomoreiraweb.com/) © Fernando Moreira
+© Fernando Moreira - [MIT License](http://mit.fernandomoreiraweb.com/) 
