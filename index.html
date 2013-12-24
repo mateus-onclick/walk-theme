@@ -16,25 +16,33 @@
     <![endif]-->
 <body>
     <!-- Le navbar top -->
-    <div class="navbartop navbar">
+    <div class="navbartop navbar navbar-default">
+
         <div class="container">
 
             <div class="row">
 
                 <div class="col-lg-6 hidden-sm">
-                    <span class="pull-left"><i class="glyphicon glyphicon-phone"></i> (123) 456-7890 - <i class="glyphicon glyphicon-envelope"></i> contact@walk.com</span>
+                    <ul class="list-inline pull-left">
+                        <li><i class="glyphicon glyphicon-phone"></i> (123) 456-7890</li>
+                        <li class="divider"> | </li>
+                        <li><i class="glyphicon glyphicon-envelope"></i> contact@walk.com</li>
+                    </ul>
                 </div>
 
                 <div class="col-lg-6">
+
                     <ul class="nav nav-pills pull-right">
                         <li><a href="#">Follow us</a></li>
                         <li><a href="#SignInModal" data-toggle="modal">Sign In</a></li>
                         <li class="active"><a href="https://github.com/fernando-dev/walk-theme" target="_blank">Download</a></li>
                     </ul>
+
                 </div>
 
             </div>
         </div>
+
     </div>
     <!-- End Le navbar top -->
 
@@ -57,8 +65,10 @@
     <!-- End Le header -->
 
     <!-- Le primary navgation -->
-    <nav id="primary-nav" class="navbar">
+    <nav id="primary-nav" class="navbar navbar-default"  role="navigation">
+
         <div class="container">
+
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -68,6 +78,7 @@
             <a class="navbar-brand visible-sm" href="./">Navigation</a>
 
             <div class="nav-collapse">
+
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#"><i class="glyphicon glyphicon-home"></i> Home</a></li>
                     <li><a href="#">About</a></li>
@@ -75,6 +86,7 @@
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Blog <span class="caret"></span> </a>
+
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                             <li><a href="#">Category 1</a></li>
                             <li><a href="#">Category 2</a></li>
@@ -82,18 +94,24 @@
                             <li><a href="#">Category 4</a></li>
                             <li><a href="#">Category 5</a></li>
                         </ul>
+
                     </li>
                     <li><a href="#">Contact</a></li>
                 </ul>
 
                 <div class="row">
+
                     <form action="./" method="get" id="search-form" class="navbar-form pull-right col-lg-3">
                         <input type="text" class="form-control input-small" id="s" name="s" placeholder="Search for something...">
                         <button type="submit"><span class="glyphicon glyphicon-search"></span></button>
                     </form>
+
                 </div>
+
             </div>
+
         </div>
+
     </nav>
     <!-- End Le primary navgation -->
 
@@ -102,15 +120,10 @@
 
         <!-- Le Carousel -->
         <div id="slider" class="carousel slide">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#slider" data-slide-to="0" class="active"></li>
-                <li data-target="#slider" data-slide-to="1"></li>
-                <li data-target="#slider" data-slide-to="2"></li>
-            </ol>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
+
                 <div class="item active">
                     <img src="./assets/images/slider1.jpg" alt="">
                     <div class="carousel-caption visible-lg">
@@ -118,6 +131,7 @@
                         <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-shopping-cart"></span> &nbsp;Purchase</a>
                     </div>
                 </div>
+
                 <div class="item">
                     <img src="./assets/images/slider2.jpg" alt="">
                     <div class="carousel-caption visible-lg">
@@ -125,6 +139,7 @@
                         <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-shopping-cart"></span> &nbsp;Purchase</a>
                     </div>
                 </div>
+
                 <div class="item">
                     <img src="./assets/images/slider3.jpg" alt="">
                     <div class="carousel-caption visible-lg">
@@ -132,7 +147,15 @@
                         <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-shopping-cart"></span> &nbsp;Purchase</a>
                     </div>
                 </div>
+
             </div>
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#slider" data-slide-to="0" class="active"></li>
+                <li data-target="#slider" data-slide-to="1"></li>
+                <li data-target="#slider" data-slide-to="2"></li>
+            </ol>
 
             <!-- Controls -->
             <a class="left carousel-control" href="#slider" data-slide="prev">
@@ -147,32 +170,49 @@
         <div class="clearfix"></div><!-- Le clearfix -->
 
         <section class="teaser row">
+
             <article class="col-lg-4">
+
                 <div class="icon-box teaser-icon pull-left"><span class="glyphicon glyphicon-phone"></span></div>
+
                 <header class="teaser-header"><h3>Responsive Design <small>Bootstrap 3</small></h3></header>
+
                 <div class="clearfix"></div><!-- Le clearfix -->
+
                 <div class="teaser-content">
                     <p>Nullam sit amet nisi nisi, sit amet faucibus tellus. In ut leo a mauris feugiat faucibus non sed lacus. Cras elit velit, porta blandit tempor in, commodo. In ut leo a mauris feugiat faucibus non sed lacus. Cras elit velit, porta blandit tempor in, commodo. <a href="#">Read more &raquo;</a></p>
                 </div>
+
             </article>
 
             <article class="col-lg-4">
+
                 <div class="icon-box teaser-icon pull-left"><span class="glyphicon glyphicon-leaf"></span></div>
+
                 <header class="teaser-header"><h3>Lorem ipsum dolor</h3></header>
+
                 <div class="clearfix"></div><!-- Le clearfix -->
+
                 <div class="teaser-content">
                     <p>Nullam sit amet nisi nisi, sit amet faucibus tellus. In ut leo a mauris feugiat faucibus non sed lacus. Cras elit velit, porta blandit tempor in, commodo. In ut leo a mauris feugiat faucibus non sed lacus. Cras elit velit, porta blandit tempor in, commodo. <a href="#">Read more &raquo;</a></p>
                 </div>
+
             </article>
 
             <article class="col-lg-4">
+
                 <div class="icon-box teaser-icon pull-left"><span class="glyphicon glyphicon-calendar"></span></div>
+
                 <header class="teaser-header"><h3>Lorem ipsum dolor</h3></header>
+
                 <div class="clearfix"></div><!-- Le clearfix -->
+
                 <div class="teaser-content">
                     <p>Nullam sit amet nisi nisi, sit amet faucibus tellus. In ut leo a mauris feugiat faucibus non sed lacus. Cras elit velit, porta blandit tempor in, commodo. In ut leo a mauris feugiat faucibus non sed lacus. Cras elit velit, porta blandit tempor in, commodo. <a href="#">Read more &raquo;</a></p>
                 </div>
+
             </article>
+
         </section>
 
 
@@ -252,7 +292,7 @@
     <div class="container">
         <div class="well well-liked">
             <h3 class="pull-left"><span class="glyphicon glyphicon-heart-empty"></span> You liked this template? </h3>
-            <a href="https://pagseguro.uol.com.br/checkout/nc/nl/donation/sender-identification.jhtml?t=a3fcbba916d9b8674b72649e256a21e5" target="_blank" class="btn btn-primary btn-large pull-right"> Buy me a coffee! </a>
+            <a href="#" target="_blank" class="btn btn-primary btn-lg pull-right"> Buy me a coffee! </a>
             <div class="clearfix"></div>
         </div>
     </div>
@@ -266,7 +306,7 @@
             <p class="pull-left">Copyright&copy; 2013 - Walk Bootstrap template</p>
 
             <ul class="nav nav-pills pull-right">
-                <li><a href="./humans.txt" target="_blank"> <3 who did </a></li>
+                <li><a href="./humans.txt" target="_blank"> &lt;3 who did </a></li>
             </ul>
 
         </div>
@@ -295,9 +335,13 @@
                             <input type="password" class="form-control" placeholder="Password">
                         </div>
 
-                        <label class="checkbox">
+                        <div class="clearfix"></div>
+
+                        <label class="checkbox pull-right">
                             <input type="checkbox" value="remember-me">Remember me
                         </label>
+
+                        <div class="clearfix"></div>
                     </div>
                     <div class="modal-footer">
 
@@ -310,6 +354,12 @@
         </div>
     </div>
     <!-- End Login Modal -->
+
+    <div id="gototop">
+        <a href="#!gototop" class="tips" title="Go to top!">
+            <i class="glyphicon glyphicon-chevron-up"></i>
+        </a>
+    </div>
 
     <!-- Le scripts -->
     <script src="./assets/js/plugins.min.js"></script>

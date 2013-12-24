@@ -10,15 +10,16 @@
 // -------------------------
 
 @gray-darker:            lighten(#000, 13.5%); // #222
-@gray-dark:              lighten(#000, 20%);   // #333
-@gray:                   lighten(#000, 33.5%); // #555
+@gray-dark:              lighten(#000, 29%);   // #4a4a4a
+@gray:                   lighten(#000, 46%);   // #757575
 @gray-light:             lighten(#000, 60%);   // #999
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
 // Brand colors
 // -------------------------
 
-@brand-primary:         #428bca;
+// @brand-primary:         #428bca;
+@brand-primary:         #f2893e;
 @brand-success:         #5cb85c;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
@@ -28,7 +29,7 @@
 // -------------------------
 
 @body-bg:               #fff;
-@text-color:            @gray-dark;
+@text-color:            @gray;
 
 // Links
 // -------------------------
@@ -90,9 +91,9 @@
 @line-height-large:              1.33;
 @line-height-small:              1.5;
 
-@border-radius-base:             4px;
-@border-radius-large:            6px;
-@border-radius-small:            3px;
+@border-radius-base:             0px;
+@border-radius-large:            0px;
+@border-radius-small:            0px;
 
 @component-active-color:         #fff;
 @component-active-bg:            @brand-primary;
@@ -155,7 +156,7 @@
 @input-color:                    @gray;
 @input-border:                   #ccc;
 @input-border-radius:            @border-radius-base;
-@input-border-focus:             #66afe9;
+@input-border-focus:             #888;
 
 @input-color-placeholder:        @gray-light;
 
@@ -179,8 +180,10 @@
 @dropdown-divider-bg:            #e5e5e5;
 
 @dropdown-link-color:            @gray-dark;
-@dropdown-link-hover-color:      darken(@gray-dark, 5%);
-@dropdown-link-hover-bg:         #f5f5f5;
+// @dropdown-link-hover-color:      darken(@gray-dark, 5%);
+@dropdown-link-hover-color:      #fff;
+// @dropdown-link-hover-bg:         #f5f5f5;
+@dropdown-link-hover-bg:         @brand-primary;
 
 @dropdown-link-active-color:     @component-active-color;
 @dropdown-link-active-bg:        @component-active-bg;
@@ -584,8 +587,8 @@
 @carousel-control-opacity:                    .5;
 @carousel-control-font-size:                  20px;
 
-@carousel-indicator-active-bg:                #fff;
-@carousel-indicator-border-color:             #fff;
+@carousel-indicator-active-bg:                lighten(@brand-primary, 15%);
+@carousel-indicator-border-color:             lighten(@brand-primary, 25%);
 
 @carousel-caption-color:                      #fff;
 

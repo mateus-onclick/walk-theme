@@ -27,6 +27,8 @@ body {
   background-color: @body-bg;
 }
 
+.selection(@background: @brand-primary, @color: #ffffff);
+
 // Reset fonts for relevant elements
 input,
 button,
@@ -43,6 +45,7 @@ textarea {
 a {
   color: @link-color;
   text-decoration: none;
+  .transition();
 
   &:hover,
   &:focus {
