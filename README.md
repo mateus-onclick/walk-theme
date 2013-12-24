@@ -18,6 +18,9 @@ Walk - Bootstrap template bootstrap 3
 * v1.1.0 Jul 31, 2013
     * Modal Sign in
 
+* v1.2.0 Dez 24, 2013
+    * Using Less Bootstrap 3
+
 ## License ##
 
 © Fernando Moreira - [MIT License](http://mit.fernandomoreiraweb.com/) 
